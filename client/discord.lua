@@ -11,16 +11,16 @@ CreateThread(function()
         -- (11-11-2018) New Natives:
 
         -- Here you can add hover text for the "large" icon.
-        SetDiscordRichPresenceAssetText('This is a lage icon with text')
+        SetDiscordRichPresenceAssetText('Dies ist ein großes Symbol mit Text')
        
         -- Here you will have to put the image name for the "small" icon.
         SetDiscordRichPresenceAssetSmall('logo_name')
 
         -- Here you can add hover text for the "small" icon.
-        SetDiscordRichPresenceAssetSmallText('This is a lsmall icon with text')
+        SetDiscordRichPresenceAssetSmallText('Dies ist ein kleines Symbol mit Text')
 
         QBCore.Functions.TriggerCallback('smallresources:server:GetCurrentPlayers', function(result)
-            SetRichPresence('Players: '..result..'/64')
+            SetRichPresence('Bürger: '..result..'/1024')
         end)
 
         -- (26-02-2021) New Native:
@@ -30,8 +30,8 @@ CreateThread(function()
             First paramater is the button index (0 or 1), second is the title and 
             last is the url (this has to start with "fivem://connect/" or "https://") 
         ]]--
-        SetDiscordRichPresenceAction(0, "First Button!", "fivem://connect/localhost:30120")
-        SetDiscordRichPresenceAction(1, "Second Button!", "fivem://connect/localhost:30120")
+        SetDiscordRichPresenceAction(0, "Join EpicV!", "fivem://connect/185.223.30.96:30120")
+        SetDiscordRichPresenceAction(1, "Join TeamSpeak!", "ts3server://45.155.172.36?port=8569")
 
         -- It updates every minute just in case.
 	Wait(60000)

@@ -30,7 +30,7 @@ RegisterNetEvent('qb-carwash:client:washCar', function()
         WashDecalsFromVehicle(PedVehicle, 1.0)
         washingVehicle = false
     end, function() -- Cancel
-        QBCore.Functions.Notify("Washing canceled ..", "error")
+        QBCore.Functions.Notify("Waschen abgebrochen ..", "error")
         washingVehicle = false
     end)
 end)
@@ -56,7 +56,7 @@ CreateThread(function()
                                     if dirtLevel > Config.DirtLevel then
                                         TriggerServerEvent('qb-carwash:server:washCar')
                                     else
-                                        QBCore.Functions.Notify("The vehicle isn't dirty", 'error')
+                                        QBCore.Functions.Notify("Das Fahrzeug ist nicht schmutzig", 'error')
                                     end
                                 end
                             else

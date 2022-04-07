@@ -38,11 +38,11 @@ local function TriggerCruiseControl()
     if CruisedSpeed == 0 and IsDriving() then
         if GetVehicleSpeed() > 0 and GetVehicleCurrentGear(GetVehicle()) > 0 then
             CruisedSpeed = GetVehicleSpeed()
-            CruisedSpeedMph = TransformToMph(CruisedSpeed) -- Comment me for mp/h
-            -- CruisedSpeedKm = TransformToKm(CruisedSpeed) -- Uncomment me for km/h
+            -- CruisedSpeedMph = TransformToMph(CruisedSpeed) -- Comment me for mp/h
+            CruisedSpeedKm = TransformToKm(CruisedSpeed) -- Uncomment me for km/h
             TriggerEvent('seatbelt:client:ToggleCruise')
-            QBCore.Functions.Notify("Cruise Activated: " .. CruisedSpeedMph .." MP/H") -- Comment me for mp/h
-            -- QBCore.Functions.Notify("Cruise Activated: " .. CruisedSpeedKm ..  " km/h") -- Uncomment me for km/h
+            -- QBCore.Functions.Notify("Cruise Activated: " .. CruisedSpeedMph .." MP/H") -- Comment me for mp/h
+            QBCore.Functions.Notify("Tempomat Aktiviert: " .. CruisedSpeedKm ..  " km/h") -- Uncomment me for km/h
             CreateThread(function()
                 while CruisedSpeed > 0 and IsInVehicle() == Player do
                     Wait(0)
@@ -50,7 +50,7 @@ local function TriggerCruiseControl()
                         (CruisedSpeed - 1.5) then
                         CruisedSpeed = 0
                         TriggerEvent('seatbelt:client:ToggleCruise')
-                        QBCore.Functions.Notify("Cruise Deactivated", "error")
+                        QBCore.Functions.Notify("Tempomat deaktiviert", "error")
                         Wait(2000)
                         break
                     end
@@ -61,13 +61,13 @@ local function TriggerCruiseControl()
                     end
                     if IsControlJustPressed(1, 246) then
                         TriggerEvent('seatbelt:client:ToggleCruise')
-                        CruisedSpeed = GetVehicleSpeed() -- Comment me for mp/h
-                        --CruisedSpeedKm = TransformToKm(CruisedSpeed) -- Uncomment me for km/h
+                        -- CruisedSpeed = GetVehicleSpeed() -- Comment me for mp/h
+                        CruisedSpeedKm = TransformToKm(CruisedSpeed) -- Uncomment me for km/h
                     end
                     if IsControlJustPressed(2, 72) then
                         CruisedSpeed = 0
                         TriggerEvent('seatbelt:client:ToggleCruise')
-                        QBCore.Functions.Notify("Cruise Deactivated", "error")
+                        QBCore.Functions.Notify("Tempomat deaktiviert", "error")
                         Wait(2000)
                         break
                     end
@@ -85,9 +85,9 @@ RegisterCommand('togglecruise', function()
             Player = PlayerPedId()
             TriggerCruiseControl()
         else
-            QBCore.Functions.Notify("Cruise control unavailable", "error")
+            QBCore.Functions.Notify("Tempomat nicht verfügbar", "error")
         end
     end
 end, false)
 
-RegisterKeyMapping('togglecruise', 'Toggle Cruise Control', 'keyboard', 'Y')
+RegisterKeyMapping('togglecruise', 'Tempomat ein- und ausschalten', 'keyboard', 'Y')

@@ -12,22 +12,22 @@ Config.DefaultPrice = 20 -- carwash
 Config.DirtLevel = 0.1 --carwash dirt level
 
 ConsumeablesEat = {
-    ["sandwich"] = math.random(35, 54),
-    ["tosti"] = math.random(40, 50),
-    ["twerks_candy"] = math.random(35, 54),
-    ["snikkel_candy"] = math.random(40, 50),
+    ["sandwich"] = math.random(5, 10),
+    ["tosti"] = math.random(5, 15),
+    ["twerks_candy"] = math.random(3, 7),
+    ["snikkel_candy"] = math.random(3, 7),
 }
 
 ConsumeablesDrink = {
-    ["water_bottle"] = math.random(35, 54),
-    ["kurkakola"] = math.random(35, 54),
-    ["coffee"] = math.random(40, 50),
+    ["water_bottle"] = math.random(5, 15),
+    ["kurkakola"] = math.random(3, 12),
+    ["coffee"] = math.random(4, 10),
 }
 
 ConsumeablesAlcohol = {
-    ["whiskey"] = math.random(20, 30),
-    ["beer"] = math.random(30, 40),
-    ["vodka"] = math.random(20, 40),
+    ["whiskey"] = math.random(4, 10),
+    ["beer"] = math.random(2, 8),
+    ["vodka"] = math.random(2, 8),
 }
 
 Config.BlacklistedScenarios = {
@@ -93,6 +93,7 @@ Config.BlacklistedVehs = {
     [`rrocket`] = true,
     [`ruiner2`] = true,
     [`deluxo`] = true,
+    [`minitank`] = true,
 }
 
 Config.BlacklistedPeds = {
@@ -106,32 +107,32 @@ Config.BlacklistedPeds = {
 
 Config.Teleports = {
     --Elevator @ labs
-    [1] = {
-        [1] = {
-            coords = vector4(3540.74, 3675.59, 20.99, 167.5),
-            ["AllowVehicle"] = false,
-            drawText = '[E] Take Elevator Up'
-        },
-        [2] = {
-            coords = vector4(3540.74, 3675.59, 28.11, 172.5),
-            ["AllowVehicle"] = false,
-            drawText = '[E] Take Elevator Down'
-        },
+    -- [1] = {
+    --     [1] = {
+    --         coords = vector4(3540.74, 3675.59, 20.99, 167.5),
+    --         ["AllowVehicle"] = false,
+    --         drawText = '[E] Take Elevator Up'
+    --     },
+    --     [2] = {
+    --         coords = vector4(3540.74, 3675.59, 28.11, 172.5),
+    --         ["AllowVehicle"] = false,
+    --         drawText = '[E] Take Elevator Down'
+    --     },
 
-    },
-    --Coke Processing Enter/Exit
-    [2] = {
-        [1] = {
-            coords = vector4(909.49, -1589.22, 30.51, 92.24),
-            ["AllowVehicle"] = false,
-            drawText = '[E] Enter Coke Processing'
-        },
-        [2] = {
-            coords = vector4(1088.81, -3187.57, -38.99, 181.7),
-            ["AllowVehicle"] = false,
-            drawText = '[E] Leave'
-        },
-    },
+    -- },
+    -- --Coke Processing Enter/Exit
+    -- [2] = {
+    --     [1] = {
+    --         coords = vector4(909.49, -1589.22, 30.51, 92.24),
+    --         ["AllowVehicle"] = false,
+    --         drawText = '[E] Enter Coke Processing'
+    --     },
+    --     [2] = {
+    --         coords = vector4(1088.81, -3187.57, -38.99, 181.7),
+    --         ["AllowVehicle"] = false,
+    --         drawText = '[E] Leave'
+    --     },
+    -- },
 }
 
 Config.CarWash = { -- carwash
