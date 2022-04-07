@@ -19,15 +19,16 @@ ConsumeablesEat = {
 }
 
 ConsumeablesDrink = {
-    ["water_bottle"] = math.random(5, 15),
-    ["kurkakola"] = math.random(3, 12),
-    ["coffee"] = math.random(4, 10),
+    ["water_bottle"] = math.random(15, 20),
+    ["kurkakola"] = math.random(10, 15),
+    ["coffee"] = math.random(10,15),
 }
 
 ConsumeablesAlcohol = {
-    ["whiskey"] = math.random(4, 10),
-    ["beer"] = math.random(2, 8),
-    ["vodka"] = math.random(2, 8),
+    ["whiskey"] = math.random(10),
+    ["beer"] = math.random(10),
+    ["vodka"] = math.random(10),
+    ["lambrusco"] = math.random(10),
 }
 
 Config.BlacklistedScenarios = {
