@@ -38,8 +38,8 @@ local function TriggerCruiseControl()
     if CruisedSpeed == 0 and IsDriving() then
         if GetVehicleSpeed() > 0 and GetVehicleCurrentGear(GetVehicle()) > 0 then
             CruisedSpeed = GetVehicleSpeed()
-            -- CruisedSpeedMph = TransformToMph(CruisedSpeed) -- Comment me for mp/h
-            CruisedSpeedKm = TransformToKm(CruisedSpeed) -- Uncomment me for km/h
+            CruisedSpeedMph = TransformToMph(CruisedSpeed) -- Comment me for mp/h
+            --CruisedSpeedKm = TransformToKm(CruisedSpeed) -- Uncomment me for km/h
             TriggerEvent('seatbelt:client:ToggleCruise')
             -- QBCore.Functions.Notify("Cruise Activated: " .. CruisedSpeedMph .." MP/H") -- Comment me for mp/h
             QBCore.Functions.Notify("Tempomat Aktiviert: " .. CruisedSpeedKm ..  " km/h") -- Uncomment me for km/h
@@ -61,8 +61,8 @@ local function TriggerCruiseControl()
                     end
                     if IsControlJustPressed(1, 246) then
                         TriggerEvent('seatbelt:client:ToggleCruise')
-                        -- CruisedSpeed = GetVehicleSpeed() -- Comment me for mp/h
-                        CruisedSpeedKm = TransformToKm(CruisedSpeed) -- Uncomment me for km/h
+                         CruisedSpeed = GetVehicleSpeed() -- Comment me for mp/h
+                        -- CruisedSpeedKm = TransformToKm(CruisedSpeed) -- Uncomment me for km/h
                     end
                     if IsControlJustPressed(2, 72) then
                         CruisedSpeed = 0
