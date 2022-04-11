@@ -12,8 +12,8 @@ Config.DefaultPrice = 20 -- carwash
 Config.DirtLevel = 0.1 --carwash dirt level
 
 ConsumeablesEat = {
-    ["sandwich"] = math.random(5, 10),
-    ["tosti"] = math.random(5, 15),
+    ["sandwich"] = math.random(10, 15),
+    ["tosti"] = math.random(15, 20),
     ["twerks_candy"] = math.random(3, 7),
     ["snikkel_candy"] = math.random(3, 7),
 }
@@ -25,10 +25,10 @@ ConsumeablesDrink = {
 }
 
 ConsumeablesAlcohol = {
-    ["whiskey"] = math.random(10),
-    ["beer"] = math.random(10),
-    ["vodka"] = math.random(10),
-    ["lambrusco"] = math.random(10),
+    ["whiskey"] = math.random(15, 20),
+    ["beer"] = math.random(15, 20),
+    ["vodka"] = math.random(15, 20),
+    ["lambrusco"] = math.random(15, 20),
 }
 
 Config.BlacklistedScenarios = {
