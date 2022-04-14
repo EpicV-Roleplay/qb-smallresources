@@ -20,7 +20,7 @@ CreateThread(function()
         SetDiscordRichPresenceAssetSmallText('Dies ist ein kleines Symbol mit Text')
 
         QBCore.Functions.TriggerCallback('smallresources:server:GetCurrentPlayers', function(result)
-            SetRichPresence('Bürger: '..result..'/1024')
+            SetRichPresence('Bürger: '..result..'/2048')
         end)
 
         -- (26-02-2021) New Native:
